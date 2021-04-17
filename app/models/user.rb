@@ -4,6 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  has_many :admins
+  has_many :olympics
+  has_many :responsables
   belongs_to :hierarchy
 
   validates :name, presence: true, format: { with: /^([a-zA-z]+\s[a-zA-z]+)$/, message: "name and surname", multiline: true }
