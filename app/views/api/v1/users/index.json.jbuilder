@@ -1,3 +1,5 @@
-json.array! @users do |user|
-  json.extract! user, :id, :name, :email, :hierarchy
-end
+json.array! @users, :id, :name, :email
+
+# json.hierarchies @users.hierarchy do |responsable|
+#   # json.extract! responsable, :id, :name
+# end

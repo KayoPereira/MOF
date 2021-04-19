@@ -5,8 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :admins
-  has_many :olympics
-  has_many :responsables
+  # has_many :olympics
+  has_many :responsable
   belongs_to :hierarchy
 
   validates :name, presence: true, format: { with: /^([a-zA-z]+\s[a-zA-z]+)$/, message: "name and surname", multiline: true }
